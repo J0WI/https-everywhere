@@ -4,7 +4,7 @@
 		- JW_Platform.com.xml
 
 	Valid, problematic (March 2016):
-		<target host="ssl.p.jwpcdn.com" />(breaks video plugins, e.g. pbs.org)
+		<target host="ssl.p.jwpcdn.com" /> (breaks video plugins, e.g. pbs.org)
 
 	Mismatch/NXDOMAIN (March 2016):
 		<target host="cdn.s.jwpcdn.com" />
@@ -22,12 +22,13 @@
 		<target host="insights.jwplayer.com" />
 		<target host="status.jwplayer.com" />
 
-	Timeout/Refused (March 2016):
+	Timeout/Refused (May 2016):
 		<target host="jw7.jwplayer.com" />
 		<target host="demo.jwplayer.com" />
 		<target host="sdk.jwplayer.com" />
+		<target host="secure.longtailvideo.com" />
 -->
-<ruleset name="LongTail (partial)" >
+<ruleset name="LongTail (partial)">
 
 	<target host="s.jwpltx.com" />
 	<target host="jwpltx.com" />
@@ -41,7 +42,6 @@
 	<target host="l.longtailvideo.com" />
 	<target host="lp.longtailvideo.com" />
 	<target host="plugins.longtailvideo.com" />
-	<target host="secure.longtailvideo.com" />
 	<target host="securelp.longtailvideo.com" />
 	<target host="developer.longtailvideo.com" />
 
