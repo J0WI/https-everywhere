@@ -1,9 +1,12 @@
-<ruleset name="AppCoding" >
-
+<!--
+	Mismatch on ^
+-->
+<ruleset name="AppCoding">
 	<target host="app-coding.de" />
 	<target host="www.app-coding.de" />
 
+	<rule from="^http://app-coding\.ch/"
+		to="https://www.app-coding.ch/"/>
 	<rule from="^http:"
 		to="https:" />
-
 </ruleset>
