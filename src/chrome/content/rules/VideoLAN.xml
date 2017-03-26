@@ -1,27 +1,15 @@
 <!--
 	Nonfunctional subdomains:
 
-		- ganesh **
-		- nightlies *
+		- ganesh *
 		- people *
-		- planet ³
-		- rsync **
-		- sirius ***
-		- stats **
-		- update **
+		- planet (mixed content)
+		- rsync *
+		- update *
 		- www2 ***
 
 	* Refused
-	** Shows www
-	³ Redirects to http
-	*** Images 404
-
-
-	Problematic subdomains:
-
-		- addons *
-
-	* Mismatched
+	** Mismatch
 
 
 	Insecure cookies are set for these domains and hosts:
@@ -30,11 +18,13 @@
 		- wiki.videolan.org
 
 -->
-<ruleset name="VideoLAN.org (partial)">
+<ruleset name="VideoLAN.org">
 
 	<!--	Direct rewrites:
 				-->
 	<target host="videolan.org" />
+	<target host="www.videolan.org" />
+	<target host="addons.videolan.org" />
 	<target host="albiero.videolan.org" />
 	<target host="download.videolan.org" />
 	<target host="forum.videolan.org" />
@@ -42,27 +32,13 @@
 	<target host="git.videolan.org" />
 	<target host="images.videolan.org" />
 	<target host="images1.videolan.org" />
+	<target host="jenkins.videolan.org" />
 	<target host="mailman.videolan.org" />
 	<target host="munin.videolan.org" />
+	<target host="nightlies.videolan.org" />
 	<target host="trac.videolan.org" />
 	<target host="wiki.videolan.org" />
-	<target host="www.videolan.org" />
 	<target host="www1.videolan.org" />
-
-	<!--	Complications:
-				-->
-	<target host="ganesh.videolan.org" />
-	<target host="rsync.videolan.org" />
-	<target host="stats.videolan.org" />
-
-		<exclusion pattern="^http://(?:ganesh|rsync|stats)\.videolan\.org/(?!$)" />
-
-			<!--	+ve:
-					-->
-			<test url="http://ganesh.videolan.org//" />
-			<test url="http://rsync.videolan.org//" />
-			<test url="http://stats.videolan.org/?" />
-			<test url="http://stats.videolan.org//" />
 
 
 	<!--	Not secured by server:
@@ -70,14 +46,8 @@
 	<!--securecookie host="\.forum\.videolan\.org$" name="^phpbb3_\w+_(k|sid|u)$" /-->
 	<!--securecookie host="^wiki\.videolan\.org$" name="^VideoLANwikidb_session$" /-->
 
-	<securecookie host="." name="." />
+	<securecookie host=".+" name=".+" />
 
-
-	<!--	- Show www's data over https
-		- Redirect like so over http
-						-->
-	<rule from="^http://(?:ganesh|rsync|stats)\.videolan\.org/$"
-		to="https://www.videolan.org/" />
 
 	<rule from="^http:"
 		to="https:" />
