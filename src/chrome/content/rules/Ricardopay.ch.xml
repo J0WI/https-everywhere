@@ -1,0 +1,9 @@
+<!--
+	For other ricardo coverage, see Ricardo.ch.xml.
+-->
+<ruleset name="Ricardopay.ch">
+	<target host="ricardopay.ch" />
+	<target host="www.ricardopay.ch" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>
