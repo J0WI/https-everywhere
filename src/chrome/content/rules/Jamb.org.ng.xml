@@ -1,0 +1,16 @@
+<!--
+	Nonfunctional hosts in *.jamb.org.ng:
+		- support.jamb.org.ng (r)
+
+	h: http redirect
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+-->
+<ruleset name="Jamb.org.ng">
+	<target host="jamb.org.ng" />
+	<target host="www.jamb.org.ng" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>
