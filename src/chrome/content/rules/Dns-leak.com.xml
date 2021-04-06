@@ -1,0 +1,6 @@
+<ruleset name="Dns-leak.com">
+	<target host="dns-leak.com" />
+	<target host="www.dns-leak.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>
